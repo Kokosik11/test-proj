@@ -6,11 +6,11 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
+  getHello(): Promise<number> {
     return this.appService.getHello();
   }
   @Get('hi')
-  getHellohi(): string {
+  getHellohi(): Promise<number> {
     return this.appService.getHello();
   }
 }
